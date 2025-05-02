@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif; /* Added the Poppins font */
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#color_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+#color-swatch {
+  display: flex;
+}
+
+.color {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  margin: 5px; /* Adjust margin as needed */
+}
+
+button {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.814);
+  color: white;
+  border-radius: 20px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif; /* Ensure the button uses the new font */
+}
+
+button:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+#toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif; /* Ensure the toast uses the new font */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 1000;
+}
+
+#toast.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.color-swatch {
+  display: flex;
+  gap: 10px; /* Space between the colors */
+}
+
+.color {
+  width: 50px; /* Width of each color block */
+  height: 50px; /* Height of each color block */
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: transform 0.3 ease;
+}
+
+.color:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  #color_container {
+    width: 150px;
+    height: 150px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+
+  #toast {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
